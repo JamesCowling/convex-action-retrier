@@ -9,7 +9,9 @@ load_dotenv()
 
 client = ConvexClient(os.getenv("CONVEX_URL"))
 
+print("Retrying unreliable action until it succeeds...")
+
 client.mutation(
-    "retrier:retryAction",
-    {"action": "usercode:maybeAction", "actionArgs": {"failureRate": 0.1}},
+    "retrier:runAction",
+    {"action": "example:unreliableAction", "actionArgs": {"failureRate": 0.75}},
 )
