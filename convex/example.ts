@@ -1,6 +1,5 @@
 /**
- * This file is just an example action for us to retry. You can delete this and
- * use you own actions.
+ * This file is just an example action to retry.
  */
 
 import { action } from "./_generated/server";

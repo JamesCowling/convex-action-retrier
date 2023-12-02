@@ -1,14 +1,9 @@
 {
-  "name": "retrier",
+  "name": "convex-action-retrier",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "Helper function to retry a Convex action until it succeeds.",
+  "author": "James Cowling",
+  "license": "MIT",
   "dependencies": {
     "convex": "^1.6.2"
   }
