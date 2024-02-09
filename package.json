@@ -5,6 +5,6 @@
   "author": "James Cowling",
   "license": "MIT",
   "dependencies": {
-    "convex": "^1.6.2"
+    "convex": "^1.9.0"
   }
 }

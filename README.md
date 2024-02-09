@@ -14,6 +14,7 @@ test example from the command line via:
 
 ```
 # Initialize a Convex deployment.
+npm install
 npx convex init
 
 # Tail logs on the Convex deployment.
@@ -21,6 +22,19 @@ npx convex dev --tail-logs
 
 # In another terminal, retry `example:unreliableAction` until it succeeds.
 npx convex run retrier:runAction "{\"action\": \"example:unreliableAction\", \"actionArgs\": {\"failureRate\": 0.75}}"
+```
+
+You can call this from your web app in a similar fashion:
+
+```
+const retryAction = useAction(api.retrier.runAction);
+...
+retryAction({
+    action: "example:unreliableAction",
+    actionArgs: {
+        failureRate: 0.75
+    }
+});
 ```
 
 This helper schedules both the action and a `retry` mutation. The `retry`
